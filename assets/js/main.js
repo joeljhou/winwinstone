@@ -10,7 +10,6 @@ const dialogDescription = document.querySelector("[data-dialog-description]");
 const dialogClose = document.querySelector("[data-dialog-close]");
 const dialogQuote = document.querySelector("[data-dialog-quote]");
 const quoteForm = document.querySelector("[data-quote-form]");
-const formNote = document.querySelector("[data-form-note]");
 const languageToggle = document.querySelector("[data-language-toggle]");
 const languageLabel = document.querySelector("[data-language-label]");
 
@@ -62,7 +61,6 @@ const translations = {
       [".quote-form label:nth-child(3)", "Product or project"],
       [".quote-form label:nth-child(4)", "Message"],
       [".quote-form .button", "Send Inquiry"],
-      [".form-note", "The form opens your email client so the static site can work without a backend."],
       [".site-footer p", "Custom natural stone products, factory-backed OEM/ODM service, and global delivery."],
       [".footer-links a:nth-child(1)", "Products"],
       [".footer-links a:nth-child(2)", "OEM/ODM"],
@@ -108,8 +106,7 @@ const translations = {
     },
     mail: {
       defaultSubject: "OEM/ODM stone inquiry",
-      quotePrefix: "Quote request",
-      note: "Opening your email client with the inquiry details."
+      quotePrefix: "Quote request"
     }
   },
   zh: {
@@ -159,7 +156,6 @@ const translations = {
       [".quote-form label:nth-child(3)", "产品或项目"],
       [".quote-form label:nth-child(4)", "留言"],
       [".quote-form .button", "发送询盘"],
-      [".form-note", "此表单会打开您的邮件客户端，因此静态网站无需后端也能使用。"],
       [".site-footer p", "天然石材定制产品、源头工厂 OEM/ODM 服务与全球交付。"],
       [".footer-links a:nth-child(1)", "产品"],
       [".footer-links a:nth-child(2)", "OEM/ODM"],
@@ -205,8 +201,7 @@ const translations = {
     },
     mail: {
       defaultSubject: "OEM/ODM 石材询盘",
-      quotePrefix: "报价请求",
-      note: "正在打开邮件客户端并填入询盘信息。"
+      quotePrefix: "报价请求"
     }
   }
 };
@@ -300,7 +295,6 @@ quoteForm.addEventListener("submit", (event) => {
   mailto.searchParams.set("subject", `${copy.mail.quotePrefix}: ${subject}`);
   mailto.searchParams.set("body", body);
   window.location.href = mailto.toString();
-  formNote.textContent = copy.mail.note;
 });
 
 function setText(selector, value) {
