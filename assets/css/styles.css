@@ -667,6 +667,59 @@ h3 {
   color: var(--white);
 }
 
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.social-links a {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.28);
+  color: rgba(255, 255, 255, 0.72);
+  transition: transform 180ms ease, border-color 180ms ease, color 180ms ease, box-shadow 180ms ease;
+}
+
+.social-links a.whatsapp:hover,
+.social-links a.whatsapp:focus-visible {
+  color: #25D366;
+  border-color: #25D366;
+}
+
+.social-links a.youtube:hover,
+.social-links a.youtube:focus-visible {
+  color: #FF0000;
+  border-color: #FF0000;
+}
+
+.social-links a.tiktok:hover,
+.social-links a.tiktok:focus-visible {
+  color: #fff;
+  border-color: #fff;
+}
+
+.social-links a.instagram:hover,
+.social-links a.instagram:focus-visible {
+  color: #E1306C;
+  border-color: #E1306C;
+}
+
+.social-links a:hover,
+.social-links a:focus-visible {
+  transform: translateY(-2px) scale(1.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.social-links svg {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
 .product-dialog {
   width: min(940px, calc(100% - 28px));
   padding: 0;
