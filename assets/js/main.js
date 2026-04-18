@@ -15,18 +15,20 @@ const languageLabel = document.querySelector("[data-language-label]");
 
 const translations = {
   en: {
-    metaTitle: "Win Win Stone | OEM/ODM Natural Stone",
+    metaTitle: "Win-Win Stone | OEM/ODM Natural Stone",
     metaDescription: "Factory-direct OEM and ODM natural stone sinks, vanities, bathtubs, tables, and custom architectural pieces from Yunfu, Guangdong, China.",
     switchLabel: "中文",
     switchAria: "Switch to Chinese",
     text: [
       [".skip-link", "Skip to content"],
+      [".site-header .brand span", "Win-Win Stone"],
+      [".site-footer .brand span", "Win-Win Stone"],
       [".nav-toggle .sr-only", "Open navigation"],
       [".nav-links a:nth-child(1)", "Products"],
       [".nav-links a:nth-child(2)", "OEM/ODM"],
       [".nav-links a:nth-child(3)", "Why Us"],
       [".nav-links a:nth-child(4)", "Contact"],
-      [".hero .eyebrow", "Win Win Stone"],
+      [".hero .eyebrow", "Win-Win Stone"],
       ["#hero-title", "OEM/ODM natural stone, custom-made from factory to space."],
       [".hero-copy", "From Yunfu, Guangdong, the heart of the stone industry, we transform marble, travertine, quartzite, and onyx into functional works of art for homes, hospitality, and product lines."],
       [".hero-actions .primary", "Get a Free Quote"],
@@ -36,7 +38,7 @@ const translations = {
       [".hero-bottom span:nth-child(3)", "Global delivery"],
       [".intro .eyebrow", "Welcome"],
       ["#intro-title", "A bridge between raw natural material and functional art."],
-      [".intro-grid > p", "Located in Yunfu, Guangdong, China, Win Win Stone works from the source of the global stone industry. Clients can select from classic Calacatta, Carrara, quartzite, travertine, onyx, and other natural stones, then shape each piece around exact space, material, and production needs."],
+      [".intro-grid > p", "Located in Yunfu, Guangdong, China, Win-Win Stone works from the source of the global stone industry. Clients can select from classic Calacatta, Carrara, quartzite, travertine, onyx, and other natural stones, then shape each piece around exact space, material, and production needs."],
       [".products .eyebrow", "Latest Products"],
       ["#products-title", "Custom stone pieces ready for OEM/ODM projects."],
       [".products .section-heading > p:last-child", "Explore sinks, vanities, bathtubs, and dining tables. Every product can be adapted by material, size, finish, edge detail, and packing requirement."],
@@ -46,12 +48,12 @@ const translations = {
       [".filter-button[data-filter='bathroom']", "Bathroom"],
       [".video-band .eyebrow", "Factory Process"],
       ["#factory-title", "From idea to finished product."],
-      [".video-grid p:last-child", "Whether you are renovating a dream bathroom or expanding a product line, Win Win Stone handles material selection, drawing confirmation, production, inspection, safety packing, and door-to-door delivery with precision and care."],
+      [".video-grid p:last-child", "Whether you are renovating a dream bathroom or expanding a product line, Win-Win Stone handles material selection, drawing confirmation, production, inspection, safety packing, and door-to-door delivery with precision and care."],
       [".service .eyebrow", "OEM/ODM Service"],
       ["#service-title", "A clear production path for homeowners, designers, and businesses."],
       [".why .eyebrow", "One Stone. One Space. One Of A Kind."],
       ["#why-title", "Every natural stone carries its own veins, texture, and story."],
-      [".why-copy p:nth-of-type(2)", "Win Win Stone honors that uniqueness through design and craftsmanship. No two spaces should feel the same because no two stones are ever identical."],
+      [".why-copy p:nth-of-type(2)", "Win-Win Stone honors that uniqueness through design and craftsmanship. No two spaces should feel the same because no two stones are ever identical."],
       [".why-copy p:nth-of-type(3)", "From custom-cut countertops to hand-finished vanities, every creation is designed and crafted to fit not only your measurements, but also your vision."],
       [".contact .eyebrow", "Contact"],
       ["#contact-title", "Share your drawings, sizes, material ideas, or project target."],
@@ -110,18 +112,20 @@ const translations = {
     }
   },
   zh: {
-    metaTitle: "Win Win Stone | 天然石材 OEM/ODM 定制",
+    metaTitle: "稳胜石材 | 天然石材 OEM/ODM 定制",
     metaDescription: "来自中国广东云浮的天然石材源头工厂，提供石材台盆、浴室柜、浴缸、餐桌与建筑定制件 OEM/ODM 服务。",
     switchLabel: "EN",
     switchAria: "Switch to English",
     text: [
       [".skip-link", "跳到主要内容"],
+      [".site-header .brand span", "稳胜石材"],
+      [".site-footer .brand span", "稳胜石材"],
       [".nav-toggle .sr-only", "打开导航"],
       [".nav-links a:nth-child(1)", "产品"],
       [".nav-links a:nth-child(2)", "OEM/ODM"],
       [".nav-links a:nth-child(3)", "为什么选我们"],
       [".nav-links a:nth-child(4)", "联系"],
-      [".hero .eyebrow", "Win Win Stone"],
+      [".hero .eyebrow", "稳胜石材"],
       ["#hero-title", "天然石材 OEM/ODM 定制，从源头工厂到项目空间。"],
       [".hero-copy", "我们位于广东云浮这一石材产业核心产区，将大理石、洞石、石英岩、缟玛瑙等天然石材打造为适用于住宅、酒店与品牌产品线的功能艺术品。"],
       [".hero-actions .primary", "获取免费报价"],
@@ -131,7 +135,7 @@ const translations = {
       [".hero-bottom span:nth-child(3)", "支持全球交付"],
       [".intro .eyebrow", "欢迎"],
       ["#intro-title", "连接天然原石与实用艺术的桥梁。"],
-      [".intro-grid > p", "Win Win Stone 位于中国广东云浮，从全球石材产业源头服务客户。您可以选择经典卡拉卡塔、卡拉拉、石英岩、洞石、缟玛瑙及其他天然石材，并围绕空间、材料和生产需求定制每一件作品。"],
+      [".intro-grid > p", "稳胜石材位于中国广东云浮，从全球石材产业源头服务客户。您可以选择经典卡拉卡塔、卡拉拉、石英岩、洞石、缟玛瑙及其他天然石材，并围绕空间、材料和生产需求定制每一件作品。"],
       [".products .eyebrow", "最新产品"],
       ["#products-title", "适用于 OEM/ODM 项目的定制石材产品。"],
       [".products .section-heading > p:last-child", "查看台盆、浴室柜、浴缸和餐桌。每件产品都可按材料、尺寸、表面、边型和包装要求定制。"],
@@ -141,12 +145,12 @@ const translations = {
       [".filter-button[data-filter='bathroom']", "浴室"],
       [".video-band .eyebrow", "工厂流程"],
       ["#factory-title", "从想法到成品。"],
-      [".video-grid p:last-child", "无论您是在翻新理想浴室，还是扩展产品线，Win Win Stone 都能细致完成选材、图纸确认、生产、检验、安全包装和门到门交付。"],
+      [".video-grid p:last-child", "无论您是在翻新理想浴室，还是扩展产品线，稳胜石材都能细致完成选材、图纸确认、生产、检验、安全包装和门到门交付。"],
       [".service .eyebrow", "OEM/ODM 服务"],
       ["#service-title", "面向业主、设计师和企业的清晰生产流程。"],
       [".why .eyebrow", "一块石材，一个空间，独一无二。"],
       ["#why-title", "每一块天然石材都有自己的纹理、质感和故事。"],
-      [".why-copy p:nth-of-type(2)", "Win Win Stone 通过设计与工艺尊重这种独特性。没有两个空间应该完全相同，因为没有两块天然石材完全一样。"],
+      [".why-copy p:nth-of-type(2)", "稳胜石材通过设计与工艺尊重这种独特性。没有两个空间应该完全相同，因为没有两块天然石材完全一样。"],
       [".why-copy p:nth-of-type(3)", "从定制台面到手工打磨的浴室柜，每件作品不仅贴合尺寸，也贴合您的愿景。"],
       [".contact .eyebrow", "联系"],
       ["#contact-title", "发送您的图纸、尺寸、材料想法或项目目标。"],
@@ -329,8 +333,11 @@ function applyLanguage(language) {
   document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
   document.title = copy.metaTitle;
   document.querySelector("meta[name='description']").setAttribute("content", copy.metaDescription);
-  document.querySelector("meta[property='og:title']").setAttribute("content", language === "zh" ? "Win Win Stone | 天然石材定制" : "Win Win Stone");
+  document.querySelector("meta[property='og:title']").setAttribute("content", language === "zh" ? "稳胜石材 | 天然石材定制" : "Win-Win Stone");
   document.querySelector("meta[property='og:description']").setAttribute("content", copy.metaDescription);
+  document.querySelectorAll(".brand").forEach((brand) => {
+    brand.setAttribute("aria-label", language === "zh" ? "稳胜石材" : "Win-Win Stone");
+  });
   languageLabel.textContent = copy.switchLabel;
   languageToggle.setAttribute("aria-label", copy.switchAria);
 

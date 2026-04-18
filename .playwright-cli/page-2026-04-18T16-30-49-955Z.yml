@@ -1,0 +1,268 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=e3]:
+    - navigation "Primary navigation" [ref=e4]:
+      - link "Win-Win Stone" [ref=e5] [cursor=pointer]:
+        - /url: "#home"
+        - generic [ref=e6]: Win-Win Stone
+      - generic [ref=e7]:
+        - link "Products" [ref=e8] [cursor=pointer]:
+          - /url: "#products"
+        - link "OEM/ODM" [ref=e9] [cursor=pointer]:
+          - /url: "#service"
+        - link "Why Us" [ref=e10] [cursor=pointer]:
+          - /url: "#why-us"
+        - link "Contact" [ref=e11] [cursor=pointer]:
+          - /url: "#contact"
+      - button "Switch to Chinese" [ref=e12] [cursor=pointer]: 中文
+  - main [ref=e13]:
+    - region "OEM/ODM natural stone, custom-made from factory to space." [ref=e14]:
+      - img "Custom natural stone furniture and sink craftsmanship" [ref=e16]
+      - generic [ref=e18]:
+        - paragraph [ref=e19]: Win-Win Stone
+        - heading "OEM/ODM natural stone, custom-made from factory to space." [level=1] [ref=e20]
+        - paragraph [ref=e21]: From Yunfu, Guangdong, the heart of the stone industry, we transform marble, travertine, quartzite, and onyx into functional works of art for homes, hospitality, and product lines.
+        - generic [ref=e22]:
+          - link "Get a Free Quote" [ref=e23] [cursor=pointer]:
+            - /url: "#contact"
+            - img [ref=e24]
+            - text: Get a Free Quote
+          - link "View Products" [ref=e27] [cursor=pointer]:
+            - /url: "#products"
+            - img [ref=e28]
+            - text: View Products
+        - generic [ref=e31]:
+          - link "WhatsApp" [ref=e32] [cursor=pointer]:
+            - /url: https://wa.me/13927192948
+            - img [ref=e33]
+          - link "YouTube" [ref=e36] [cursor=pointer]:
+            - /url: https://www.youtube.com/@winwinstone
+            - img [ref=e37]
+          - link "TikTok" [ref=e40] [cursor=pointer]:
+            - /url: https://www.tiktok.com/@homeplus244
+            - img [ref=e41]
+          - link "Instagram" [ref=e43] [cursor=pointer]:
+            - /url: https://www.instagram.com/winwinstonenick
+            - img [ref=e44]
+      - generic [ref=e48]:
+        - generic [ref=e49]: 100% natural stone
+        - generic [ref=e50]: Custom size and design
+        - generic [ref=e51]: Global delivery
+    - region "A bridge between raw natural material and functional art." [ref=e52]:
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - paragraph [ref=e55]: Welcome
+          - heading "A bridge between raw natural material and functional art." [level=2] [ref=e56]
+        - paragraph [ref=e57]: Located in Yunfu, Guangdong, China, Win-Win Stone works from the source of the global stone industry. Clients can select from classic Calacatta, Carrara, quartzite, travertine, onyx, and other natural stones, then shape each piece around exact space, material, and production needs.
+    - region "Custom stone pieces ready for OEM/ODM projects." [ref=e58]:
+      - generic [ref=e59]:
+        - generic [ref=e60]:
+          - paragraph [ref=e61]: Latest Products
+          - heading "Custom stone pieces ready for OEM/ODM projects." [level=2] [ref=e62]
+          - paragraph [ref=e63]: Explore sinks, vanities, bathtubs, and dining tables. Every product can be adapted by material, size, finish, edge detail, and packing requirement.
+        - tablist "Product filters" [ref=e64]:
+          - tab "All" [selected] [ref=e65] [cursor=pointer]
+          - tab "Sinks" [ref=e66] [cursor=pointer]
+          - tab "Tables" [ref=e67] [cursor=pointer]
+          - tab "Bathroom" [ref=e68] [cursor=pointer]
+        - generic [ref=e69]:
+          - article [ref=e70]:
+            - button "Luxury green marble pedestal sink Sinks Luxury green marble pedestal sink Custom size, material, and design." [ref=e71] [cursor=pointer]:
+              - img "Luxury green marble pedestal sink" [ref=e72]
+              - generic [ref=e73]:
+                - generic [ref=e74]: Sinks
+                - strong [ref=e75]: Luxury green marble pedestal sink
+                - generic [ref=e76]: Custom size, material, and design.
+          - article [ref=e77]:
+            - button "Calacatta marble pedestal sink Sinks Calacatta pedestal sink Custom-made in 100% natural stone." [ref=e78] [cursor=pointer]:
+              - img "Calacatta marble pedestal sink" [ref=e79]
+              - generic [ref=e80]:
+                - generic [ref=e81]: Sinks
+                - strong [ref=e82]: Calacatta pedestal sink
+                - generic [ref=e83]: Custom-made in 100% natural stone.
+          - article [ref=e84]:
+            - button "Hand-crafted marble vessel sink Sinks Hand-crafted vessel sink Designed for residential and business orders." [ref=e85] [cursor=pointer]:
+              - img "Hand-crafted marble vessel sink" [ref=e86]
+              - generic [ref=e87]:
+                - generic [ref=e88]: Sinks
+                - strong [ref=e89]: Hand-crafted vessel sink
+                - generic [ref=e90]: Designed for residential and business orders.
+          - article [ref=e91]:
+            - button "Minimalist travertine dining table Tables Minimalist travertine dining table Modern form with natural texture." [ref=e92] [cursor=pointer]:
+              - img "Minimalist travertine dining table" [ref=e93]
+              - generic [ref=e94]:
+                - generic [ref=e95]: Tables
+                - strong [ref=e96]: Minimalist travertine dining table
+                - generic [ref=e97]: Modern form with natural texture.
+          - article [ref=e98]:
+            - button "Graceful travertine dining table Tables Graceful travertine dining table OEM/ODM orders and global delivery." [ref=e99] [cursor=pointer]:
+              - img "Graceful travertine dining table" [ref=e100]
+              - generic [ref=e101]:
+                - generic [ref=e102]: Tables
+                - strong [ref=e103]: Graceful travertine dining table
+                - generic [ref=e104]: OEM/ODM orders and global delivery.
+          - article [ref=e105]:
+            - button "Simple travertine dining table Tables Simple travertine dining table Minimal design, made to measure." [ref=e106] [cursor=pointer]:
+              - img "Simple travertine dining table" [ref=e107]
+              - generic [ref=e108]:
+                - generic [ref=e109]: Tables
+                - strong [ref=e110]: Simple travertine dining table
+                - generic [ref=e111]: Minimal design, made to measure.
+          - article [ref=e112]:
+            - button "Natural marble bathtub Bathroom Natural marble bathtub Luxury stone bathing centerpiece." [ref=e113] [cursor=pointer]:
+              - img "Natural marble bathtub" [ref=e114]
+              - generic [ref=e115]:
+                - generic [ref=e116]: Bathroom
+                - strong [ref=e117]: Natural marble bathtub
+                - generic [ref=e118]: Luxury stone bathing centerpiece.
+          - article [ref=e119]:
+            - button "Red travertine dining table Tables Red travertine dining table Warm natural veins, custom proportions." [ref=e120] [cursor=pointer]:
+              - img "Red travertine dining table" [ref=e121]
+              - generic [ref=e122]:
+                - generic [ref=e123]: Tables
+                - strong [ref=e124]: Red travertine dining table
+                - generic [ref=e125]: Warm natural veins, custom proportions.
+          - article [ref=e126]:
+            - button "Luxury stone pedestal vanity Bathroom Luxury stone pedestal vanity Personalized service and craftsmanship." [ref=e127] [cursor=pointer]:
+              - img "Luxury stone pedestal vanity" [ref=e128]
+              - generic [ref=e129]:
+                - generic [ref=e130]: Bathroom
+                - strong [ref=e131]: Luxury stone pedestal vanity
+                - generic [ref=e132]: Personalized service and craftsmanship.
+    - region "From idea to finished product." [ref=e133]:
+      - generic [ref=e135]:
+        - paragraph [ref=e136]: Factory Process
+        - heading "From idea to finished product." [level=2] [ref=e137]
+        - paragraph [ref=e138]: Whether you are renovating a dream bathroom or expanding a product line, Win-Win Stone handles material selection, drawing confirmation, production, inspection, safety packing, and door-to-door delivery with precision and care.
+    - region "A clear production path for homeowners, designers, and businesses." [ref=e140]:
+      - generic [ref=e141]:
+        - generic [ref=e142]:
+          - paragraph [ref=e143]: OEM/ODM Service
+          - heading "A clear production path for homeowners, designers, and businesses." [level=2] [ref=e144]
+        - list [ref=e145]:
+          - listitem [ref=e146]:
+            - generic [ref=e147]: "01"
+            - text: Customer requirement
+          - listitem [ref=e148]:
+            - generic [ref=e149]: "02"
+            - text: Design options
+          - listitem [ref=e150]:
+            - generic [ref=e151]: "03"
+            - text: Drawing confirmation
+          - listitem [ref=e152]:
+            - generic [ref=e153]: "04"
+            - text: Material sourcing
+          - listitem [ref=e154]:
+            - generic [ref=e155]: "05"
+            - text: Price and contract
+          - listitem [ref=e156]:
+            - generic [ref=e157]: "06"
+            - text: Production schedule
+          - listitem [ref=e158]:
+            - generic [ref=e159]: "07"
+            - text: Material purchase after deposit
+          - listitem [ref=e160]:
+            - generic [ref=e161]: "08"
+            - text: Qualified production updates
+          - listitem [ref=e162]:
+            - generic [ref=e163]: "09"
+            - text: Factory inspection
+          - listitem [ref=e164]:
+            - generic [ref=e165]: "10"
+            - text: Customer or video inspection
+          - listitem [ref=e166]:
+            - generic [ref=e167]: "11"
+            - text: Safety packing and delivery
+          - listitem [ref=e168]:
+            - generic [ref=e169]: "12"
+            - text: After-sale service
+    - region "Every natural stone carries its own veins, texture, and story." [ref=e170]:
+      - generic [ref=e171]:
+        - generic [ref=e172]:
+          - paragraph [ref=e173]: One Stone. One Space. One Of A Kind.
+          - heading "Every natural stone carries its own veins, texture, and story." [level=2] [ref=e174]
+          - paragraph [ref=e175]: Win-Win Stone honors that uniqueness through design and craftsmanship. No two spaces should feel the same because no two stones are ever identical.
+          - paragraph [ref=e176]: From custom-cut countertops to hand-finished vanities, every creation is designed and crafted to fit not only your measurements, but also your vision.
+        - generic "Company advantages" [ref=e177]:
+          - generic [ref=e178]:
+            - strong [ref=e179]: Factory-direct
+            - generic [ref=e180]: Custom-made directly from Yunfu, Guangdong.
+          - generic [ref=e181]:
+            - strong [ref=e182]: Material freedom
+            - generic [ref=e183]: Marble, travertine, quartzite, onyx, and more.
+          - generic [ref=e184]:
+            - strong [ref=e185]: Skilled artisans
+            - generic [ref=e186]: Handcrafted details from sketch to final finish.
+          - generic [ref=e187]:
+            - strong [ref=e188]: Worldwide shipment
+            - generic [ref=e189]: Inspection, safety packing, and delivery support.
+    - region "Share your drawings, sizes, material ideas, or project target." [ref=e190]:
+      - generic [ref=e191]:
+        - generic [ref=e192]:
+          - paragraph [ref=e193]: Contact
+          - heading "Share your drawings, sizes, material ideas, or project target." [level=2] [ref=e194]
+          - paragraph [ref=e195]: We will help confirm the material direction, estimate the production path, and prepare the next step for your OEM/ODM order.
+          - generic [ref=e196]:
+            - link "stone2lisa@outlook.com" [ref=e197] [cursor=pointer]:
+              - /url: mailto:stone2lisa@outlook.com
+              - img [ref=e198]
+              - text: stone2lisa@outlook.com
+            - link "info@winwinstone.com" [ref=e201] [cursor=pointer]:
+              - /url: mailto:info@winwinstone.com
+              - img [ref=e202]
+              - text: info@winwinstone.com
+            - link "+86 139 2719 2948" [ref=e205] [cursor=pointer]:
+              - /url: tel:+8613927192948
+              - img [ref=e206]
+              - text: +86 139 2719 2948
+            - generic [ref=e208]:
+              - img [ref=e209]
+              - text: Hekou Industrial Park, Yuncheng District, Yunfu, Guangdong, China
+        - generic [ref=e212]:
+          - generic [ref=e213]:
+            - text: Your name
+            - textbox "Your name" [ref=e214]
+          - generic [ref=e215]:
+            - text: Your email
+            - textbox "Your email" [ref=e216]
+          - generic [ref=e217]:
+            - text: Product or project
+            - textbox "Product or project" [ref=e218]:
+              - /placeholder: Stone sink, vanity, table, bathtub...
+          - generic [ref=e219]:
+            - text: Message
+            - textbox "Message" [ref=e220]:
+              - /placeholder: Size, stone type, quantity, finish, delivery country...
+          - button "Send Inquiry" [ref=e221] [cursor=pointer]:
+            - img [ref=e222]
+            - text: Send Inquiry
+  - contentinfo [ref=e225]:
+    - generic [ref=e226]:
+      - generic [ref=e227]:
+        - link "Win-Win Stone" [ref=e228] [cursor=pointer]:
+          - /url: "#home"
+          - generic [ref=e229]: Win-Win Stone
+        - paragraph [ref=e230]: Custom natural stone products, factory-backed OEM/ODM service, and global delivery.
+        - generic [ref=e231]:
+          - link "WhatsApp" [ref=e232] [cursor=pointer]:
+            - /url: https://wa.me/13927192948
+            - img [ref=e233]
+          - link "YouTube" [ref=e236] [cursor=pointer]:
+            - /url: https://www.youtube.com/@winwinstone
+            - img [ref=e237]
+          - link "TikTok" [ref=e240] [cursor=pointer]:
+            - /url: https://www.tiktok.com/@homeplus244
+            - img [ref=e241]
+          - link "Instagram" [ref=e243] [cursor=pointer]:
+            - /url: https://www.instagram.com/winwinstonenick
+            - img [ref=e244]
+      - generic [ref=e248]:
+        - link "Products" [ref=e249] [cursor=pointer]:
+          - /url: "#products"
+        - link "OEM/ODM" [ref=e250] [cursor=pointer]:
+          - /url: "#service"
+        - link "Why Us" [ref=e251] [cursor=pointer]:
+          - /url: "#why-us"
+        - link "Contact" [ref=e252] [cursor=pointer]:
+          - /url: "#contact"
