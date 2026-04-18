@@ -25,9 +25,11 @@ const translations = {
       [".site-footer .brand span", "Win-Win Stone"],
       [".nav-toggle .sr-only", "Open navigation"],
       [".nav-links a:nth-child(1)", "Products"],
-      [".nav-links a:nth-child(2)", "OEM/ODM"],
-      [".nav-links a:nth-child(3)", "Why Us"],
-      [".nav-links a:nth-child(4)", "Contact"],
+      [".nav-links a:nth-child(2)", "Blog"],
+      [".nav-links a:nth-child(3)", "OEM/ODM"],
+      [".nav-links a:nth-child(4)", "Why Us"],
+      [".nav-links a:nth-child(5)", "Contact"],
+      [".nav-links a:nth-child(6)", "Studio"],
       [".hero .eyebrow", "Win-Win Stone"],
       ["#hero-title", "OEM/ODM natural stone, custom-made from factory to space."],
       [".hero-copy", "From Yunfu, Guangdong, the heart of the stone industry, we transform marble, travertine, quartzite, and onyx into functional works of art for homes, hospitality, and product lines."],
@@ -65,9 +67,11 @@ const translations = {
       [".quote-form .button", "Send Inquiry"],
       [".site-footer p", "Custom natural stone products, factory-backed OEM/ODM service, and global delivery."],
       [".footer-links a:nth-child(1)", "Products"],
-      [".footer-links a:nth-child(2)", "OEM/ODM"],
-      [".footer-links a:nth-child(3)", "Why Us"],
-      [".footer-links a:nth-child(4)", "Contact"],
+      [".footer-links a:nth-child(2)", "Blog"],
+      [".footer-links a:nth-child(3)", "OEM/ODM"],
+      [".footer-links a:nth-child(4)", "Why Us"],
+      [".footer-links a:nth-child(5)", "Contact"],
+      [".footer-links a:nth-child(6)", "Studio"],
       [".dialog-content .eyebrow", "Product Detail"],
       ["[data-dialog-quote]", "Ask for This Product"]
     ],
@@ -122,9 +126,11 @@ const translations = {
       [".site-footer .brand span", "稳胜石材"],
       [".nav-toggle .sr-only", "打开导航"],
       [".nav-links a:nth-child(1)", "产品"],
-      [".nav-links a:nth-child(2)", "OEM/ODM"],
-      [".nav-links a:nth-child(3)", "为什么选我们"],
-      [".nav-links a:nth-child(4)", "联系"],
+      [".nav-links a:nth-child(2)", "博客"],
+      [".nav-links a:nth-child(3)", "OEM/ODM"],
+      [".nav-links a:nth-child(4)", "为什么选我们"],
+      [".nav-links a:nth-child(5)", "联系"],
+      [".nav-links a:nth-child(6)", "后台"],
       [".hero .eyebrow", "稳胜石材"],
       ["#hero-title", "天然石材 OEM/ODM 定制，从源头工厂到项目空间。"],
       [".hero-copy", "我们位于广东云浮这一石材产业核心产区，将大理石、洞石、石英岩、缟玛瑙等天然石材打造为适用于住宅、酒店与品牌产品线的功能艺术品。"],
@@ -162,9 +168,11 @@ const translations = {
       [".quote-form .button", "发送询盘"],
       [".site-footer p", "天然石材定制产品、源头工厂 OEM/ODM 服务与全球交付。"],
       [".footer-links a:nth-child(1)", "产品"],
-      [".footer-links a:nth-child(2)", "OEM/ODM"],
-      [".footer-links a:nth-child(3)", "为什么选我们"],
-      [".footer-links a:nth-child(4)", "联系"],
+      [".footer-links a:nth-child(2)", "博客"],
+      [".footer-links a:nth-child(3)", "OEM/ODM"],
+      [".footer-links a:nth-child(4)", "为什么选我们"],
+      [".footer-links a:nth-child(5)", "联系"],
+      [".footer-links a:nth-child(6)", "后台"],
       [".dialog-content .eyebrow", "产品详情"],
       ["[data-dialog-quote]", "咨询此产品"]
     ],
@@ -213,25 +221,28 @@ const translations = {
 let currentLanguage = localStorage.getItem("siteLanguage") === "zh" ? "zh" : "en";
 
 function setHeaderState() {
+  if (!header) return;
   header.classList.toggle("is-scrolled", window.scrollY > 20);
 }
 
 setHeaderState();
 window.addEventListener("scroll", setHeaderState, { passive: true });
 
-navToggle.addEventListener("click", () => {
-  const isOpen = navLinks.classList.toggle("is-open");
-  navToggle.setAttribute("aria-expanded", String(isOpen));
-  header.classList.toggle("nav-open", isOpen);
-});
+if (navToggle && navLinks) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("is-open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+    header?.classList.toggle("nav-open", isOpen);
+  });
 
-navLinks.addEventListener("click", (event) => {
-  if (event.target.closest("a")) {
-    navLinks.classList.remove("is-open");
-    navToggle.setAttribute("aria-expanded", "false");
-    header.classList.remove("nav-open");
-  }
-});
+  navLinks.addEventListener("click", (event) => {
+    if (event.target.closest("a")) {
+      navLinks.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+      header?.classList.remove("nav-open");
+    }
+  });
+}
 
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -254,32 +265,37 @@ productCards.forEach((card) => {
   const opener = card.querySelector(".product-open");
   const image = card.querySelector("img");
 
+  if (!opener || !image || !dialog || !dialogImage || !dialogTitle || !dialogDescription) return;
+
   opener.addEventListener("click", () => {
     dialogImage.src = image.src;
     dialogImage.alt = image.alt;
     dialogTitle.textContent = currentLanguage === "zh" ? card.dataset.titleZh : card.dataset.title;
     dialogDescription.textContent = currentLanguage === "zh" ? card.dataset.descriptionZh : card.dataset.description;
-    dialogQuote.dataset.product = dialogTitle.textContent;
+    if (dialogQuote) {
+      dialogQuote.dataset.product = dialogTitle.textContent;
+    }
     dialog.showModal();
     document.body.classList.add("dialog-open");
   });
 });
 
 function closeDialog() {
+  if (!dialog) return;
   dialog.close();
   document.body.classList.remove("dialog-open");
 }
 
-dialogClose.addEventListener("click", closeDialog);
-dialog.addEventListener("click", (event) => {
+dialogClose?.addEventListener("click", closeDialog);
+dialog?.addEventListener("click", (event) => {
   if (event.target === dialog) {
     closeDialog();
   }
 });
 
-dialogQuote.addEventListener("click", closeDialog);
+dialogQuote?.addEventListener("click", closeDialog);
 
-quoteForm.addEventListener("submit", (event) => {
+quoteForm?.addEventListener("submit", (event) => {
   event.preventDefault();
   const copy = translations[currentLanguage];
   const form = new FormData(quoteForm);
@@ -328,6 +344,8 @@ function setText(selector, value) {
 }
 
 function applyLanguage(language) {
+  if (!languageToggle || !languageLabel) return;
+
   const copy = translations[language];
 
   document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
@@ -364,14 +382,95 @@ function applyLanguage(language) {
     item.querySelector("span").textContent = description;
   });
 
-  quoteForm.elements.subject.placeholder = copy.placeholders.subject;
-  quoteForm.elements.message.placeholder = copy.placeholders.message;
+  if (quoteForm?.elements.subject) {
+    quoteForm.elements.subject.placeholder = copy.placeholders.subject;
+  }
+
+  if (quoteForm?.elements.message) {
+    quoteForm.elements.message.placeholder = copy.placeholders.message;
+  }
 }
 
-languageToggle.addEventListener("click", () => {
+languageToggle?.addEventListener("click", () => {
   currentLanguage = currentLanguage === "en" ? "zh" : "en";
   localStorage.setItem("siteLanguage", currentLanguage);
   applyLanguage(currentLanguage);
 });
 
 applyLanguage(currentLanguage);
+
+document.querySelectorAll("[data-blog-filter]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const filter = button.dataset.blogFilter;
+    const group = button.closest("[data-filter-group]") || document;
+
+    group.querySelectorAll("[data-blog-filter]").forEach((item) => {
+      const active = item === button;
+      item.classList.toggle("active", active);
+      item.setAttribute("aria-selected", String(active));
+    });
+
+    document.querySelectorAll("[data-blog-category]").forEach((article) => {
+      const categories = article.dataset.blogCategory.split(" ");
+      article.classList.toggle("is-hidden", filter !== "all" && !categories.includes(filter));
+    });
+  });
+});
+
+document.querySelectorAll("[data-studio-tab]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const target = button.dataset.studioTab;
+
+    document.querySelectorAll("[data-studio-tab]").forEach((item) => {
+      const active = item === button;
+      item.classList.toggle("active", active);
+      item.setAttribute("aria-selected", String(active));
+    });
+
+    document.querySelectorAll("[data-studio-panel]").forEach((panel) => {
+      panel.hidden = panel.dataset.studioPanel !== target;
+    });
+  });
+});
+
+document.querySelectorAll("[data-preview-form]").forEach((form) => {
+  const scope = form.closest("[data-studio-panel]") || document;
+  const previewTitle = scope.querySelector("[data-preview-title]");
+  const previewMeta = scope.querySelector("[data-preview-meta]");
+  const previewText = scope.querySelector("[data-preview-text]");
+  const previewImage = scope.querySelector("[data-preview-image]");
+  const status = scope.querySelector("[data-preview-status]");
+  const feed = document.querySelector("[data-studio-feed]");
+
+  function updatePreview() {
+    const title = form.elements.title?.value || form.dataset.fallbackTitle || "Untitled draft";
+    const category = form.elements.category?.value || "Draft";
+    const material = form.elements.material?.value || form.elements.author?.value || "Editor";
+    const summary = form.elements.summary?.value || form.dataset.fallbackSummary || "Add a short description for the preview.";
+    const image = form.elements.image?.value;
+
+    if (previewTitle) previewTitle.textContent = title;
+    if (previewMeta) previewMeta.textContent = `${category} / ${material}`;
+    if (previewText) previewText.textContent = summary;
+    if (previewImage && image) previewImage.src = image;
+  }
+
+  form.addEventListener("input", updatePreview);
+  updatePreview();
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    if (status) {
+      status.textContent = "Published";
+      status.classList.add("is-live");
+    }
+
+    if (feed) {
+      const item = document.createElement("li");
+      const title = form.elements.title?.value || form.dataset.fallbackTitle || "Untitled draft";
+      item.innerHTML = `<strong>${title}</strong><span>Published from studio preview</span>`;
+      feed.prepend(item);
+    }
+  });
+});

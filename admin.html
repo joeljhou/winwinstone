@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Content Studio | Win-Win Stone</title>
+    <meta name="description" content="Win-Win Stone content studio prototype for publishing product references, material assets, and blog articles.">
+    <meta name="theme-color" content="#13261d">
+    <meta property="og:title" content="Content Studio | Win-Win Stone">
+    <meta property="og:description" content="A static publishing interface prototype for product and blog content.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/logo.png">
+    <link rel="icon" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body class="studio-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header studio-header" data-header>
+      <nav class="nav-shell" aria-label="Primary navigation">
+        <a class="brand" href="index.html" aria-label="Win-Win Stone">
+          <img src="assets/images/logo.png" alt="" width="36" height="39">
+          <span>Win-Win Stone</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle>
+          <span class="sr-only">Open navigation</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+        <div class="nav-links" id="primary-nav" data-nav-links>
+          <a href="products.html">Products</a>
+          <a href="blog.html">Blog</a>
+          <a href="index.html#service">OEM/ODM</a>
+          <a href="index.html#contact">Contact</a>
+          <a class="is-active" href="admin.html">Studio</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="studio-main" id="main">
+      <aside class="studio-rail" aria-label="Studio sections">
+        <div>
+          <span class="studio-kicker">Workspace</span>
+          <h1>Content Studio</h1>
+        </div>
+        <nav class="studio-tabs" role="tablist" aria-label="Publishing tabs">
+          <button class="active" type="button" data-studio-tab="products" role="tab" aria-selected="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v14H5z"/><path d="M9 5v14M5 10h14"/></svg>
+            Products
+          </button>
+          <button type="button" data-studio-tab="blog" role="tab" aria-selected="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h6"/></svg>
+            Blog
+          </button>
+          <button type="button" data-studio-tab="media" role="tab" aria-selected="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v10H4z"/><path d="m8 15 3-3 2 2 2-3 3 4"/></svg>
+            Media
+          </button>
+        </nav>
+        <div class="studio-status">
+          <strong>Prototype</strong>
+          <span>Local preview only</span>
+        </div>
+      </aside>
+
+      <section class="studio-workspace">
+        <div class="studio-topbar">
+          <div>
+            <p class="eyebrow">Publishing</p>
+            <h2>Products, articles, and visual assets.</h2>
+          </div>
+          <a class="button secondary" href="products.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+            View site
+          </a>
+        </div>
+
+        <div class="studio-metrics" aria-label="Publishing overview">
+          <div>
+            <span>Products</span>
+            <strong>9</strong>
+            <small>7 published, 2 drafts</small>
+          </div>
+          <div>
+            <span>Blog posts</span>
+            <strong>6</strong>
+            <small>4 guides, 2 process notes</small>
+          </div>
+          <div>
+            <span>Assets</span>
+            <strong>10</strong>
+            <small>Catalog images ready</small>
+          </div>
+        </div>
+
+        <section class="studio-panel" data-studio-panel="products" aria-labelledby="product-editor-title">
+          <div class="studio-panel-heading">
+            <div>
+              <p class="eyebrow">Product Entry</p>
+              <h3 id="product-editor-title">Publish a stone product reference.</h3>
+            </div>
+            <span class="content-state" data-preview-status>Draft</span>
+          </div>
+          <div class="editor-grid">
+            <form class="studio-form" data-preview-form data-fallback-title="Untitled stone product" data-fallback-summary="Add a production-ready product summary.">
+              <label>
+                Product title
+                <input name="title" value="Green marble pedestal sink">
+              </label>
+              <div class="form-row">
+                <label>
+                  Category
+                  <select name="category">
+                    <option>Sinks</option>
+                    <option>Bathroom</option>
+                    <option>Tables</option>
+                    <option>Project Custom</option>
+                  </select>
+                </label>
+                <label>
+                  Material
+                  <select name="material">
+                    <option>Green marble</option>
+                    <option>Calacatta marble</option>
+                    <option>Travertine</option>
+                    <option>Quartzite</option>
+                    <option>Onyx</option>
+                  </select>
+                </label>
+              </div>
+              <label>
+                Image path
+                <input name="image" value="assets/images/green-marble-sink.jpg">
+              </label>
+              <label>
+                Slug
+                <input name="slug" value="green-marble-pedestal-sink">
+              </label>
+              <label>
+                Product summary
+                <textarea name="summary" rows="5">Custom bathroom pedestal sink in natural green marble with adjustable size, drain position, and surface finish.</textarea>
+              </label>
+              <label>
+                Custom options
+                <textarea name="options" rows="4">Material selection, dimensions, finish, faucet hole, drain position, edge detail, export packing.</textarea>
+              </label>
+              <div class="studio-actions">
+                <button class="button secondary" type="button">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12v16H6z"/><path d="M9 8h6"/></svg>
+                  Save Draft
+                </button>
+                <button class="button primary" type="submit">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                  Publish
+                </button>
+              </div>
+            </form>
+            <aside class="studio-preview" aria-label="Product preview">
+              <img src="assets/images/green-marble-sink.jpg" alt="Product preview" data-preview-image>
+              <div>
+                <span class="product-type" data-preview-meta>Sinks / Green marble</span>
+                <strong data-preview-title>Green marble pedestal sink</strong>
+                <p data-preview-text>Custom bathroom pedestal sink in natural green marble with adjustable size, drain position, and surface finish.</p>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="studio-panel" data-studio-panel="blog" aria-labelledby="blog-editor-title" hidden>
+          <div class="studio-panel-heading">
+            <div>
+              <p class="eyebrow">Blog Entry</p>
+              <h3 id="blog-editor-title">Publish a material article.</h3>
+            </div>
+            <span class="content-state" data-preview-status>Draft</span>
+          </div>
+          <div class="editor-grid">
+            <form class="studio-form" data-preview-form data-fallback-title="Untitled article" data-fallback-summary="Add a practical summary for the article card.">
+              <label>
+                Article title
+                <input name="title" value="How to choose stone for a custom bathroom sink">
+              </label>
+              <div class="form-row">
+                <label>
+                  Category
+                  <select name="category">
+                    <option>Stone Guide</option>
+                    <option>Product Ideas</option>
+                    <option>Factory Process</option>
+                    <option>Care</option>
+                  </select>
+                </label>
+                <label>
+                  Author
+                  <input name="author" value="Win-Win Stone">
+                </label>
+              </div>
+              <label>
+                Cover image path
+                <input name="image" value="assets/images/calacatta-sink.jpg">
+              </label>
+              <label>
+                Slug
+                <input name="slug" value="choose-stone-custom-bathroom-sink">
+              </label>
+              <label>
+                Excerpt
+                <textarea name="summary" rows="5">A practical guide to choosing marble, travertine, quartzite, and onyx for custom sink projects.</textarea>
+              </label>
+              <label>
+                Body outline
+                <textarea name="body" rows="4">Stone behavior, finish options, thickness, drainage, sealing, packing, and quote details.</textarea>
+              </label>
+              <div class="studio-actions">
+                <button class="button secondary" type="button">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12v16H6z"/><path d="M9 8h6"/></svg>
+                  Save Draft
+                </button>
+                <button class="button primary" type="submit">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                  Publish
+                </button>
+              </div>
+            </form>
+            <aside class="studio-preview article-preview" aria-label="Article preview">
+              <img src="assets/images/calacatta-sink.jpg" alt="Article preview" data-preview-image>
+              <div>
+                <span class="product-type" data-preview-meta>Stone Guide / Win-Win Stone</span>
+                <strong data-preview-title>How to choose stone for a custom bathroom sink</strong>
+                <p data-preview-text>A practical guide to choosing marble, travertine, quartzite, and onyx for custom sink projects.</p>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="studio-panel" data-studio-panel="media" aria-labelledby="media-title" hidden>
+          <div class="studio-panel-heading">
+            <div>
+              <p class="eyebrow">Media Library</p>
+              <h3 id="media-title">Product images and material assets.</h3>
+            </div>
+            <a class="button secondary" href="products.html">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+              Catalog
+            </a>
+          </div>
+          <div class="media-grid">
+            <figure>
+              <img src="assets/images/green-marble-sink.jpg" alt="Green marble sink">
+              <figcaption>green-marble-sink.jpg</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/images/calacatta-sink.jpg" alt="Calacatta sink">
+              <figcaption>calacatta-sink.jpg</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/images/minimalist-table.jpg" alt="Travertine table">
+              <figcaption>minimalist-table.jpg</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/images/marble-bathtub.jpg" alt="Marble bathtub">
+              <figcaption>marble-bathtub.jpg</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="activity-panel" aria-labelledby="activity-title">
+          <div class="studio-panel-heading">
+            <div>
+              <p class="eyebrow">Recent Activity</p>
+              <h3 id="activity-title">Publishing queue</h3>
+            </div>
+          </div>
+          <ol class="activity-list" data-studio-feed>
+            <li>
+              <strong>Minimalist travertine dining table</strong>
+              <span>Product updated</span>
+            </li>
+            <li>
+              <strong>Travertine dining tables for quiet luxury interiors</strong>
+              <span>Blog draft edited</span>
+            </li>
+            <li>
+              <strong>Natural marble bathtub</strong>
+              <span>Asset replaced</span>
+            </li>
+          </ol>
+        </section>
+      </section>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
