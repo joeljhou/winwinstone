@@ -562,6 +562,7 @@ h3 {
 
 .product-open img {
   width: 100%;
+  height: auto;
   aspect-ratio: 4 / 3;
   object-fit: cover;
   background: #f1f1ee;
@@ -1123,6 +1124,7 @@ h3 {
 
 .feature-story img {
   width: 100%;
+  height: auto;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   border-radius: var(--radius);
@@ -1176,6 +1178,7 @@ h3 {
 
 .article-card img {
   width: 100%;
+  height: auto;
   aspect-ratio: 16 / 10;
   object-fit: cover;
   background: #f1f1ee;

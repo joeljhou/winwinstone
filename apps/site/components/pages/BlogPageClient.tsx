@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -52,7 +53,13 @@ export default function BlogPage() {
         {/* Featured Guide */}
         <section className="journal-feature section-pad" aria-labelledby="feature-title">
           <div className="container feature-story">
-            <img src="/images/calacatta-sink.jpg" alt="Calacatta stone sink material detail" />
+            <Image
+              src="/images/calacatta-sink.jpg"
+              alt="Calacatta stone sink material detail"
+              width={800}
+              height={1000}
+              sizes="(max-width: 760px) 100vw, 42vw"
+            />
             <div>
               <p className="eyebrow">{b.featureEyebrow}</p>
               <h2 id="feature-title">{b.featureTitle}</h2>
@@ -99,7 +106,13 @@ export default function BlogPage() {
                 return (
                   <article key={i} className={`article-card${hidden ? " is-hidden" : ""}`}>
                     <a href="#articles">
-                      <img src={`/images/${a.image}`} alt={a.title} />
+                      <Image
+                        src={`/images/${a.image}`}
+                        alt={a.title}
+                        width={800}
+                        height={500}
+                        sizes="(max-width: 760px) 100vw, (max-width: 1120px) 50vw, 33vw"
+                      />
                       <span className="article-body">
                         <span className="product-type">{a.type}</span>
                         <strong>{a.title}</strong>

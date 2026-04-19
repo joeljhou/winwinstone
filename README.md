@@ -7,6 +7,8 @@
 | 官网 | `apps/site`  | 产品展示、博客、OEM/ODM 服务、询盘  | winwinstonecustom.vercel.app |
 | 后台 | `apps/admin` | 内容管理后台原型（产品 / 博客 / 素材） | winwinstoneadmin.vercel.app  |
 
+发布流程见 [docs/deployment.md](docs/deployment.md)。
+
 ---
 
 ## 迁移方案：纯静态 → Next.js Monorepo

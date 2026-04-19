@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useEffect } from "react";
+import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { useLanguage } from "@/lib/LanguageContext";
 
@@ -31,7 +32,13 @@ export default function ProductDialog({ product, onClose }: ProductDialogProps) 
       </button>
       {product && (
         <>
-          <img src={`/images/${product.image}`} alt={language === "zh" ? product.titleZh : product.title} />
+          <Image
+            src={`/images/${product.image}`}
+            alt={language === "zh" ? product.titleZh : product.title}
+            width={900}
+            height={675}
+            sizes="(max-width: 760px) 100vw, 560px"
+          />
           <div className="dialog-content">
             <p className="eyebrow">{t.home.dialogEyebrow}</p>
             <h3>{language === "zh" ? product.titleZh : product.title}</h3>
@@ -98,7 +105,13 @@ export function ProductGrid({ products, filter, onOpen, language }: ProductGridP
         return (
           <article key={i} className={`product-card${hidden ? " is-hidden" : ""}`} data-category={p.category}>
             <button className="product-open" type="button" onClick={() => onOpen(p)}>
-              <img src={`/images/${p.image}`} alt={language === "zh" ? p.titleZh : p.title} />
+              <Image
+                src={`/images/${p.image}`}
+                alt={language === "zh" ? p.titleZh : p.title}
+                width={800}
+                height={600}
+                sizes="(max-width: 760px) 100vw, (max-width: 1120px) 50vw, 33vw"
+              />
               <span className="product-body">
                 <span className="product-type">{p.type}</span>
                 <strong>{p.title}</strong>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { useLanguage } from "@/lib/LanguageContext";
 
@@ -22,7 +23,7 @@ export default function Header() {
     <header className={`site-header${scrolled ? " is-scrolled" : ""}${navOpen ? " nav-open" : ""}`} data-header>
       <nav className="nav-shell" aria-label="Primary navigation">
         <Link className="brand" href="/" aria-label={t.brandName}>
-          <img src="/images/logo.png" alt="" width={36} height={39} />
+          <Image src="/images/logo.png" alt="" width={36} height={39} />
           <span>{t.brandName}</span>
         </Link>
 

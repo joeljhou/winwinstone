@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { useLanguage } from "@/lib/LanguageContext";
 
@@ -11,7 +12,7 @@ export default function Footer() {
       <div className="container footer-grid">
         <div>
           <Link className="brand footer-brand" href="/">
-            <img src="/images/logo.png" alt="" width={36} height={39} />
+            <Image src="/images/logo.png" alt="" width={36} height={39} />
             <span>{t.brandName}</span>
           </Link>
           <p>{t.footerCopy}</p>
