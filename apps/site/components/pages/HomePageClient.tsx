@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProductDialog, { FilterBar, ProductGrid, QuoteForm } from "@/components/ProductWidgets";
@@ -22,7 +22,7 @@ export default function HomePage() {
 
   return (
     <>
-      <Link className="skip-link" href="#main">{t.skipLink}</Link>
+      <a className="skip-link" href="#main">{t.skipLink}</a>
       <Header />
 
       <main id="main">
@@ -91,7 +91,13 @@ export default function HomePage() {
               <h2 id="factory-title">{h.videoTitle}</h2>
               <p>{h.videoCopy}</p>
             </div>
-            <video src="/video/custom-made.mp4" controls preload="metadata" poster="/images/stone-vanity.jpg" />
+            <video
+              src="/video/custom-made.mp4"
+              controls
+              preload="metadata"
+              poster="/images/stone-vanity.jpg"
+              suppressHydrationWarning
+            />
           </div>
         </section>
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/lib/LanguageContext";
@@ -21,7 +21,7 @@ export default function BlogPage() {
 
   return (
     <>
-      <Link className="skip-link" href="#main">{t.skipLink}</Link>
+      <a className="skip-link" href="#main">{t.skipLink}</a>
       <Header />
 
       <main id="main">
@@ -133,4 +133,3 @@ export default function BlogPage() {
     </>
   );
 }
-

@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Footer() {
@@ -41,4 +41,3 @@ export default function Footer() {
     </footer>
   );
 }
-
