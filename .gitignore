@@ -1,3 +1,8 @@
-.vercel
+node_modules/
+.next/
+.turbo/
+.vercel/
 .env*.local
-/.playwright-cli/
+dist/
+out/
+*.tsbuildinfo
