@@ -7,7 +7,7 @@ import { useLanguage } from "@/lib/LanguageContext";
 export default function Header() {
   const [navOpen, setNavOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { language, toggleLanguage, t } = useLanguage();
+  const { toggleLanguage, t } = useLanguage();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);

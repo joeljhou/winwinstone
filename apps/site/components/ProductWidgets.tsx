@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useRef, useEffect } from "react";
+import Link from "next/link";
 import { useLanguage } from "@/lib/LanguageContext";
 
 interface ProductDialogProps {
@@ -12,9 +13,11 @@ export default function ProductDialog({ product, onClose }: ProductDialogProps) 
   const dialogRef = useRef<HTMLDialogElement>(null);
   const { language, t } = useLanguage();
 
-  if (product && dialogRef.current && !dialogRef.current.open) {
-    dialogRef.current.showModal();
-  }
+  useEffect(() => {
+    if (product && dialogRef.current && !dialogRef.current.open) {
+      dialogRef.current.showModal();
+    }
+  }, [product]);
 
   const close = () => {
     dialogRef.current?.close();
@@ -33,10 +36,10 @@ export default function ProductDialog({ product, onClose }: ProductDialogProps) 
             <p className="eyebrow">{t.home.dialogEyebrow}</p>
             <h3>{language === "zh" ? product.titleZh : product.title}</h3>
             <p>{language === "zh" ? product.descZh : product.desc}</p>
-            <a className="button primary" href="/#contact" onClick={close}>
+            <Link className="button primary" href="/#contact" onClick={close}>
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z" /><path d="m4 7 8 6 8-6" /></svg>
               {t.home.dialogQuote}
-            </a>
+            </Link>
           </div>
         </>
       )}

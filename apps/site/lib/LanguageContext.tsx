@@ -15,13 +15,14 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | null>(null);
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>("en");
+function getStoredLanguage(): Language {
+  if (typeof window === "undefined") return "en";
+  const saved = localStorage.getItem("siteLanguage");
+  return saved === "zh" ? "zh" : "en";
+}
 
-  useEffect(() => {
-    const saved = localStorage.getItem("siteLanguage") as Language;
-    if (saved === "zh" || saved === "en") setLanguage(saved);
-  }, []);
+export function LanguageProvider({ children }: { children: ReactNode }) {
+  const [language, setLanguage] = useState<Language>(getStoredLanguage);
 
   useEffect(() => {
     document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
