@@ -29,8 +29,8 @@ export default function BlogPage() {
         {/* Hero */}
         <section className="page-hero journal-hero" aria-labelledby="journal-hero-title">
           <picture className="page-hero-media">
-            <source srcSet="/images/green-marble-sink.jpg" media="(min-width: 760px)" />
-            <img src="/images/minimalist-table.jpg" alt="Natural stone product detail for editorial guide" />
+            <source srcSet="/images/green-marble-sink-hero.jpg" media="(min-width: 760px)" />
+            <img src="/images/minimalist-table-hero.jpg" alt="Natural stone product detail for editorial guide" />
           </picture>
           <div className="page-hero-overlay" />
           <div className="page-hero-content">

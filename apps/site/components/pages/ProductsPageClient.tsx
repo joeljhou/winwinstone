@@ -30,8 +30,8 @@ export default function ProductsPage() {
         {/* Hero */}
         <section className="page-hero product-hero" aria-labelledby="products-hero-title">
           <picture className="page-hero-media">
-            <source srcSet="/images/minimalist-table.jpg" media="(min-width: 760px)" />
-            <img src="/images/stone-vanity.jpg" alt="Natural stone vanity and custom product finish" />
+            <source srcSet="/images/minimalist-table-hero.jpg" media="(min-width: 760px)" />
+            <img src="/images/stone-vanity-hero.jpg" alt="Natural stone vanity and custom product finish" />
           </picture>
           <div className="page-hero-overlay" />
           <div className="page-hero-content">

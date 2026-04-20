@@ -4,6 +4,8 @@ import { getLocalizedPath, metadataBase, type LocalizedPathname } from "@/lib/se
 
 const routes: LocalizedPathname[] = ["/", "/products", "/blog"];
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return routes.flatMap((route) =>
     routing.locales.map((locale) => ({

@@ -1,11 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import { Link } from "@/i18n/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import ProductDialog, { FilterBar, ProductGrid, QuoteForm } from "@/components/ProductWidgets";
+import ProductDialog, { FilterBar, QuoteForm } from "@/components/ProductWidgets";
 import { useLanguage } from "@/lib/LanguageContext";
+
+const ProductGrid = lazy(() => import("@/components/ProductWidgets").then(module => ({ default: module.ProductGrid })));
 
 export default function HomePage() {
   const { language, t } = useLanguage();
@@ -29,8 +31,13 @@ export default function HomePage() {
         {/* Hero */}
         <section className="hero" id="home" aria-labelledby="hero-title">
           <picture className="hero-media">
-            <source srcSet="/images/minimalist-table.jpg" media="(min-width: 760px)" />
-            <img src="/images/green-marble-sink.jpg" alt="Custom natural stone furniture and sink craftsmanship" />
+            <source srcSet="/images/minimalist-table-hero.jpg" media="(min-width: 760px)" />
+            <img
+              src="/images/green-marble-sink-hero.jpg"
+              alt="Custom natural stone furniture and sink craftsmanship"
+              fetchPriority="high"
+              decoding="async"
+            />
           </picture>
           <div className="hero-overlay" />
           <div className="hero-content">
@@ -79,7 +86,9 @@ export default function HomePage() {
               <p>{h.productsCopy}</p>
             </div>
             <FilterBar filters={filters} active={filter} onFilter={setFilter} />
-            <ProductGrid products={t.products} filter={filter} onOpen={setDialogProduct} language={language} />
+            <Suspense fallback={<div className="loading">Loading products...</div>}>
+              <ProductGrid products={t.products} filter={filter} onOpen={setDialogProduct} language={language} />
+            </Suspense>
           </div>
         </section>
 
@@ -94,7 +103,7 @@ export default function HomePage() {
             <video
               src="/video/custom-made.mp4"
               controls
-              preload="metadata"
+              preload="none"
               poster="/images/stone-vanity.jpg"
               suppressHydrationWarning
             />

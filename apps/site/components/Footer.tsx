@@ -12,7 +12,7 @@ export default function Footer() {
       <div className="container footer-grid">
         <div>
           <Link className="brand footer-brand" href="/">
-            <Image src="/images/logo.png" alt="" width={36} height={39} />
+            <Image src="/images/logo-96.png" alt="" width={36} height={39} />
             <span>{t.brandName}</span>
           </Link>
           <p>{t.footerCopy}</p>

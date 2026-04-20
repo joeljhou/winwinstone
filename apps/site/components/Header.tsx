@@ -8,7 +8,7 @@ import { useLanguage } from "@/lib/LanguageContext";
 export default function Header() {
   const [navOpen, setNavOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { toggleLanguage, t } = useLanguage();
+  const { languageHref, t } = useLanguage();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -23,7 +23,7 @@ export default function Header() {
     <header className={`site-header${scrolled ? " is-scrolled" : ""}${navOpen ? " nav-open" : ""}`} data-header>
       <nav className="nav-shell" aria-label="Primary navigation">
         <Link className="brand" href="/" aria-label={t.brandName}>
-          <Image src="/images/logo.png" alt="" width={36} height={39} />
+          <Image src="/images/logo-96.png" alt="" width={36} height={39} />
           <span>{t.brandName}</span>
         </Link>
 
@@ -46,14 +46,17 @@ export default function Header() {
           <Link href="/#contact" onClick={close}>{t.nav.contact}</Link>
         </div>
 
-        <button
+        <a
           className="language-toggle"
-          type="button"
-          onClick={toggleLanguage}
+          href={languageHref}
+          onClick={(event) => {
+            close();
+            event.currentTarget.href = `${languageHref}${window.location.search}${window.location.hash}`;
+          }}
           aria-label={t.switchAria}
         >
           <span>{t.switchLabel}</span>
-        </button>
+        </a>
       </nav>
     </header>
   );
